@@ -38,7 +38,7 @@ function validate() {
         email.focus();
         return false;
     }
-    if (mobile.value.length <= 10) {
+    if (mobile.value.length < 10) {
         alert("Mobile number is required");
         mobile.focus();
         return false;
