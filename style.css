@@ -1,0 +1,59 @@
+h1{
+    text-align: center;
+}
+body{  
+    font-family: Calibri, Helvetica, sans-serif;  
+    background-color: rgb(253, 253, 253);  
+}  
+.container {  
+    padding: 50px;  
+    border-radius: 5px;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}  
+input[type=text], input[type=password], textarea, input[type=tel] {  
+    width: 100%;  
+    padding: 15px;  
+    margin: 5px 0 22px 0;  
+    display: inline-block;  
+    border-radius: 5PX;
+}  
+input[type=text]:focus, input[type=password]:focus,input[type=tel]:focus {    
+    outline: #f18a41 5px;  
+}  
+div{  
+    padding: 10px 0;  
+}  
+hr{  
+    border: 1px solid #f1f1f1;  
+    margin-bottom: 25px;  
+}  
+.registerbtn {  
+    background-color: #68f741;  
+    color: white;  
+    padding: 16px 20px;  
+    margin: 8px 0;  
+    border-radius: 5px;
+    border: none;  
+    cursor: pointer;  
+    width: 50%;  
+    opacity: 0.9;  
+}  
+.registerbtn:hover {  
+    opacity: 1;  
+}  
+.resetbtn {  
+    background-color: #f18a41;  
+    color: white;  
+    padding: 16px 20px;  
+    margin: 8px 0;  
+    border: none;  
+    border-radius: 5px;
+    cursor: pointer;  
+    width: 50%;  
+    opacity: 0.9;  
+}  
+.resetbtn:hover {  
+    opacity: 1;  
+}  

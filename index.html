@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="download.png">
+    <title>Course Registration</title>
+</head>
+<body>
+    <h1>Course Registration Form</h1>
+    <hr>
+    <form method="" action="ok.html" name="reg_form" onsubmit="return validate()">
+        <div class="container">
+            <label><b>Name: </b></label>
+            <input type="text" name="name" placeholder="Name">
+            <label><b>Address: </b></label>
+            <textarea name="address" id="" cols="30" rows="10"></textarea>
+            <label><b>Gender: </b></label>
+            <input type="radio" name="gender" value="male">Male
+            <input type="radio" name="gender" value="femele">Female
+            <br><br>
+            <label><b>Course: </b></label>
+            <select name="course">
+                <option value="select course">select course</option>
+                <option value="WT">WT</option>
+                <option value="OT">OT</option>
+                <option value="OOP">OOP</option>
+                <option value="DBMS">DBMS</option>
+            </select>
+            <br><br>
+            <label><b>Department: </b></label>
+            <select name="dept">
+                <option value="Department">Department</option>
+                <option value="AI & DS">AI & DS</option>
+                <option value="AI & ML">AI & ML</option>
+            </select>
+            <br><br>
+            <label><b>Email Id: </b></label>
+            <input type="text" name="email" placeholder="example@kongu.edu">
+            <label><b>Mobile: </b></label>
+            <input type="tel" name="mobile">
+            <br>
+            <label for="pass"><b>Password</b></label>  
+            <input type="password" placeholder="Enter Password" name="pass">  
+            <label for="cpass"><b>Confirm Password</b></label>  
+            <input type="password" placeholder="Confirm Password" name="cpass">   
+            <center>
+                <input type="submit" name="submit" class="registerbtn" value="Submit">
+                <input type="reset" name="reset" class="resetbtn" value="Reset">
+            </center>
+        </div>
+    </form>
+    <script src="index.js"></script>
+</body>
+
+</html>
