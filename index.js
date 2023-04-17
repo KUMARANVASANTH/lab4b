@@ -20,17 +20,14 @@ function validate() {
     }
     if (gender.value.length <= 0) {
         alert("Gender is required");
-        gender.focus();
         return false;
     }
     if (course.value == "select course") {
         alert("Course is required");
-        course.focus();
         return false;
     }
     if (dept.value == "Department") {
         alert("Department is required");
-        dept.focus();
         return false;
     }
     if (email.value.length <= 0) {
