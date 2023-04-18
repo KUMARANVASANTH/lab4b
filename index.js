@@ -10,7 +10,6 @@ function validate() {
     var cp = document.reg_form.cpass;  
     if (name.value.length <= 0) {
         alert("Name is required");
-        fname.focus();
         return false;
     }
     if (address.value.length <= 0) {
