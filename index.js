@@ -7,7 +7,11 @@ function validate() {
     var course = document.reg_form.course;
     var dept = document.reg_form.dept;
     var p = document.reg_form.pass;  
-    var cp = document.reg_form.cpass;  
+    var cp = document.reg_form.cpass; 
+    var em = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    var pwd =  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,12}$/;
+    var regName = /^[a-zA-Z]+ [a-zA-Z]+$/;
+    var numbers = /^\d{10}$/;
     if (name.value.length <= 0) {
         alert("Name is required");
         return false;
@@ -29,8 +33,8 @@ function validate() {
         alert("Department is required");
         return false;
     }
-    if (email.value.length <= 0) {
-        alert("Email Id is required");
+    if (!email.match(em)) {
+        alert("Email Id is not valid");
         email.focus();
         return false;
     }
@@ -39,7 +43,7 @@ function validate() {
         mobile.focus();
         return false;
     }
-    if(p.value.length==0)
+    if((p.value.length==0)||(!p.match(pwd))
     {
         alert("Password is required")
         return false
