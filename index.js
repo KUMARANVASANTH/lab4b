@@ -1,19 +1,35 @@
 function validate() {
-    var name = document.reg_form.name;
-    var address = document.reg_form.address;
-    var gender = document.reg_form.gender;
-    var email = document.reg_form.email;
-    var mobile = document.reg_form.mobile;
-    var course = document.reg_form.course;
-    var dept = document.reg_form.dept;
-    var p = document.reg_form.pass;  
-    var cp = document.reg_form.cpass; 
-    var em = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    var pwd =  /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,12}$/;
-    var regName = /^[a-zA-Z]+ [a-zA-Z]+$/;
-    var numbers = /^\d{10}$/;
-    if (name.value.length <= 0) {
-        alert("Name is required");
+    var name = document.reg_form.name.value;
+    var address = document.reg_form.address.value;
+    var gender = document.reg_form.gender.value;
+    var email = document.reg_form.email.value;
+    var mobile = document.reg_form.mobile.value;
+    var course = document.reg_form.course.value;
+    var dept = document.reg_form.dept.value;
+    var p = document.reg_form.pass.value;  
+    var cp = document.reg_form.cpass.value; 
+    const nameRegex = /^[a-zA-Z\s]+$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const phoneRegex = /^\d{10}$/;
+    const passwordRegex = /^(?=.\d)(?=.[a-z])(?=.[A-Z])(?=.[a-zA-Z]).{8,}$/;
+    if (!nameRegex.test(name)) {
+        alert('Please enter a valid name.');
+        return false;
+    }
+    if (!emailRegex.test(email)) {
+        alert('Please enter a valid email address.');
+        return false;
+    }
+    if (!phoneRegex.test(mobile)) {
+        alert('Please enter a valid 10-digit phone number.');
+        return false;
+    }
+    if (!passwordRegex.test(p)) {
+        alert('Password must be at least 8 characters long and contain at least one lowercase letter, one uppercase letter, and one digit.');
+        return false;
+    }
+    if (p !== cp) {
+        alert('Passwords do not match.');
         return false;
     }
     if (address.value.length <= 0) {
@@ -33,30 +49,5 @@ function validate() {
         alert("Department is required");
         return false;
     }
-    if (!email.match(em)) {
-        alert("Email Id is not valid");
-        email.focus();
-        return false;
-    }
-    if (mobile.value.length < 10) {
-        alert("Mobile number is required");
-        mobile.focus();
-        return false;
-    }
-    if((p.value.length==0)||(!p.match(pwd))
-    {
-        alert("Password is required")
-        return false
-    }
-    if(p.value.length<8)
-    {
-        alert("The password should be 8 characters");
-        return false;
-    }  
-    if(p.value !== cp.value)  
-    {   
-        alert("Passwords did not match"); 
-        return false
-    } 
     return true;
 }
