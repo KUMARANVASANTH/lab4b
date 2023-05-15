@@ -34,7 +34,6 @@ function validate() {
     }
     if (address.length <= 0) {
         alert("Address is required");
-        address.focus();
         return false;
     }
     if (gender.length <= 0) {
