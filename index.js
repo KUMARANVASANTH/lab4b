@@ -32,20 +32,20 @@ function validate() {
         alert('Passwords do not match.');
         return false;
     }
-    if (address.value.length <= 0) {
+    if (address.length <= 0) {
         alert("Address is required");
         address.focus();
         return false;
     }
-    if (gender.value.length <= 0) {
+    if (gender.length <= 0) {
         alert("Gender is required");
         return false;
     }
-    if (course.value == "select course") {
+    if (course == "select course") {
         alert("Course is required");
         return false;
     }
-    if (dept.value == "Department") {
+    if (dept == "Department") {
         alert("Department is required");
         return false;
     }
